@@ -1,7 +1,7 @@
 import openpyxl
 
 
-def create_excel(*texts, outfile='output.xlsx'):
+def create_excel(texts, outfile='output.xlsx'):
     wb = openpyxl.Workbook()
 
     ws = wb.active
@@ -26,4 +26,4 @@ if __name__ == '__main__':
             'Sinha, B. K., & Mason, R. P. (2015). IS METABOLIC ACTIVATION OF TOPOISOMERASE II POISONS IMPORTANT IN THE MECHANISM OF CYTOTOXICITY?. <i>Journal of drug metabolism & toxicology</i>, <i>6</i>(3), 186. https://doi.org/10.4172/2157-7609.1000186',
         ]
     ]
-    create_excel(*texts)
+    create_excel(texts)

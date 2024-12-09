@@ -28,7 +28,7 @@ def add_formatted_paragraph(doc, text, font='Times New Roman', eastFont='宋体'
         run.font.size = Pt(size)
 
 
-def create_docx(*texts, outfile='output.docx'):
+def create_docx(texts, outfile='output.docx'):
     doc = Document()
     
     for text in texts:
@@ -50,4 +50,4 @@ if __name__ == '__main__':
             'Sinha, B. K., & Mason, R. P. (2015). IS METABOLIC ACTIVATION OF TOPOISOMERASE II POISONS IMPORTANT IN THE MECHANISM OF CYTOTOXICITY?. <i>Journal of drug metabolism & toxicology</i>, <i>6</i>(3), 186. https://doi.org/10.4172/2157-7609.1000186',
         ]
     ]
-    create_docx(*texts)
+    create_docx(texts)

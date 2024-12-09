@@ -67,16 +67,16 @@ class PubmedCitations(object):
         return data
     
     def to_docx(self, outfile='output.docx'):
-        utils.create_docx(*self.format_data, outfile=outfile)
+        utils.create_docx(self.format_data, outfile=outfile)
 
     def to_excel(self, outfile='output.xlsx'):
-        utils.create_excel(*self.orig_data, outfile=outfile)
+        utils.create_excel(self.orig_data, outfile=outfile)
 
     def to_csv(self, outfile='output.csv', sep=','):
-        utils.create_csv(*self.orig_data, outfile=outfile, sep=sep)
+        utils.create_csv(self.orig_data, outfile=outfile, sep=sep)
 
     def to_json(self, outfile='output.json'):
-        utils.create_json(self.data, outfile=outfile)
+        utils.create_json(self.orig_data, outfile=outfile)
 
     def to_jsonlines(self, outfile='output.jl'):
-        utils.create_jsonlines(self.data, outfile=outfile)
+        utils.create_jsonlines(self.orig_data, outfile=outfile)
